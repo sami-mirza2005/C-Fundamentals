@@ -17,7 +17,8 @@ C-Basics/
 ├── 09_pointers/           → pointer basics
 ├── 10_recursion/          → sum, factorial, fibonacci
 ├── 11_structures/         → struct, array of structs
-└── 12_misc/               → static variable
+├── 12_misc/               → static variable
+└── 13_Tower_Of_Hanoi/     → recursive Tower of Hanoi
 ```
 
 ## Files
@@ -119,6 +120,18 @@ C-Basics/
 | File | What it does |
 |------|-------------|
 | `static_variable.c` | static variable retains value across calls |
+
+### 13 — Tower of Hanoi
+| File | What it does |
+|------|-------------|
+| `13_Tower_Of_Hanoi.c` | moves n disks from rod 1 to rod 3 using recursion, prints each step |
+
+**Logic in brief:**
+- `TOH(n, A, B, C)` means — move n disks from A to C, using B as the helper rod
+- First move the top (n-1) disks from A to B (using C as helper)
+- Then move the largest disk from A to C
+- Finally move the (n-1) disks from B to C (using A as helper)
+- Total moves = **2ⁿ - 1**
 
 ## Compile & Run
 
